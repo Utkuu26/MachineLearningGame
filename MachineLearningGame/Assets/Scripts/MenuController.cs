@@ -32,6 +32,12 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void HomeButton()
+    {
+        mainMenuPanel.SetActive(true);
+        nickNamePanel.SetActive(false);
+    }
+
    
 
 }

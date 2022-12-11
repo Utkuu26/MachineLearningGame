@@ -26,6 +26,11 @@ public class GameSceneMenuController : MonoBehaviour
         
     }
 
+    public void HomeButton()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void OpenTutorialScreen()
     {
         hintScreen.SetActive(false);
@@ -90,6 +95,21 @@ public class GameSceneMenuController : MonoBehaviour
     {
         level1GamePlayScreenÝnfoPanel.SetActive(false);
 
+    }
+
+    public void LevelHintPanel1Url1()
+    {
+        Application.OpenURL("https://medium.com/biliþim-hareketi/python-ile-ses-tanýma-uygulamasý-oluþturma-3d0d972c62a6");
+    }
+
+    public void LevelHintPanel1Url2()
+    {
+        Application.OpenURL("https://arxiv.org/abs/2108.09203");
+    }
+
+    public void LevelHintPanel1Url3()
+    {
+        Application.OpenURL("https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0");
     }
 
 

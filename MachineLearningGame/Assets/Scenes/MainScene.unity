@@ -3280,6 +3280,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: HomeBtn Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8155108239148411125, guid: 8238560d7d2eb104fbbbb93631d650fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155108239148411125, guid: 8238560d7d2eb104fbbbb93631d650fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155108239148411125, guid: 8238560d7d2eb104fbbbb93631d650fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1150653679}
+    - target: {fileID: 8155108239148411125, guid: 8238560d7d2eb104fbbbb93631d650fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155108239148411125, guid: 8238560d7d2eb104fbbbb93631d650fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HomeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155108239148411125, guid: 8238560d7d2eb104fbbbb93631d650fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155108239148411125, guid: 8238560d7d2eb104fbbbb93631d650fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8238560d7d2eb104fbbbb93631d650fb, type: 3}
 --- !u!224 &1808250871 stripped
