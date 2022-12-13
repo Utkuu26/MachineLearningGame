@@ -35,6 +35,15 @@ public class LineScript : MonoBehaviour
         lr.SetPosition(0, transform.position);
     }
 
+    public void OnButtonDown()
+    {
+        lr.enabled = true;
+        touchStartedOnButton = true;
+        lr.positionCount = 1;
+        lr.SetPosition(0, transform.position);
+    }
+
+
 
     private void Update()
     {
@@ -44,7 +53,7 @@ public class LineScript : MonoBehaviour
             Vector3 worldFromMousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 100));
             Vector3 direction = worldFromMousePos - Camera.main.transform.position;
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.transform.position, direction, out hit , 100f))
+            if (Physics.Raycast(Camera.main.transform.position, direction, out hit , 100000000f))
             {
                 Debug.DrawLine(Camera.main.transform.position, direction, Color.red, 1f);
                 GameObject newWayPoint = new GameObject("WayPoint");
