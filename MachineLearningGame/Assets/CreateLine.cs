@@ -93,6 +93,7 @@ public class CreateLine : MonoBehaviour
                 line.enabled = true;
                 startTransform = null;
                 endTransform = null;
+             
             }
         }
 
