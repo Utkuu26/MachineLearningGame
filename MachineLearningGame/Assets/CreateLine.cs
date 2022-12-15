@@ -6,18 +6,11 @@ using UnityEngine.UI;
 public class CreateLine : MonoBehaviour
 {
     public LineRenderer line;
-    public Transform redConn1;
-    public Transform redConn2;
-    public Transform orangeConn1;
-    public Transform orangeConn2;
-    public Transform orangeConn3;
-    public Transform orangeConn4;
-    public Transform orangeConn5;
-    public Transform orangeConn6;
     public List<Button> StartButtons;
     public List<Button> EndButtons;
     public Transform startTransform;
     public Transform endTransform;
+    public string StartButtonName;
     public int turn=0;
     void Start()
     {
@@ -41,7 +34,7 @@ public class CreateLine : MonoBehaviour
             {
                 if (item.GetComponent<LineButtons>().isClicked)
                 {
-                   
+                    StartButtonName = item.GetComponent<LineButtons>().ButtonName;
                     startTransform = item.transform;
                     turn++;
                     foreach (var endbtn in EndButtons)
@@ -56,7 +49,7 @@ public class CreateLine : MonoBehaviour
 
                 if (item.GetComponent<LineButtons>().isRightClick)
                 {
-                    line.enabled = false;
+                    item.GetComponent<LineButtons>().line.enabled = false;
                     item.GetComponent<LineButtons>().isRightClick = false;
                 }
             }
@@ -89,8 +82,16 @@ public class CreateLine : MonoBehaviour
 
             if (startTransform!=null && endTransform!=null)
             {
-                CreateLines(startTransform, endTransform);
-                line.enabled = true;
+                foreach (var item in StartButtons)
+                {
+                    if (StartButtonName == item.GetComponent<LineButtons>().ButtonName)
+                    {
+                        CreateLines(startTransform, endTransform, item.GetComponent<LineButtons>().line);
+                        item.GetComponent<LineButtons>().line.enabled = true;
+                    }
+                }
+               
+               
                 startTransform = null;
                 endTransform = null;
              
@@ -101,7 +102,7 @@ public class CreateLine : MonoBehaviour
 
     }
 
-    public void CreateLines(Transform startTransform, Transform endTrasnform)
+    public void CreateLines(Transform startTransform, Transform endTrasnform , LineRenderer line)
     {
         line.SetPosition(0, startTransform.position + new Vector3(0,0,-3f));
         line.SetPosition(1, endTrasnform.position + new Vector3(0, 0, -3f));

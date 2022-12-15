@@ -8,6 +8,8 @@ public class LineButtons : MonoBehaviour, IPointerClickHandler
 {
     public bool isClicked = false;
     public bool isRightClick = false;
+    public string ButtonName;
+    public LineRenderer line;
     //void Start()
     //{
 
