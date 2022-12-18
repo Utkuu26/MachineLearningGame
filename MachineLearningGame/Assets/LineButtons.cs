@@ -10,6 +10,7 @@ public class LineButtons : MonoBehaviour, IPointerClickHandler
     public bool isRightClick = false;
     public string ButtonName;
     public LineRenderer line;
+    public List<Image> ImageList;
     //void Start()
     //{
 
@@ -28,15 +29,15 @@ public class LineButtons : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.button == PointerEventData.InputButton.Left)
+        if (eventData.button == PointerEventData.InputButton.Left && this.GetComponent<Button>().interactable)
         {
             Debug.Log("Left click");
             isClicked = true;
         }
             
-        else if (eventData.button == PointerEventData.InputButton.Middle)
+        else if (eventData.button == PointerEventData.InputButton.Middle && this.GetComponent<Button>().interactable)
             Debug.Log("Middle click");
-        else if (eventData.button == PointerEventData.InputButton.Right)
+        else if (eventData.button == PointerEventData.InputButton.Right && this.GetComponent<Button>().interactable)
         {
             Debug.Log("Right click");
             isRightClick = true;

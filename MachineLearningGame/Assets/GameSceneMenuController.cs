@@ -14,16 +14,18 @@ public class GameSceneMenuController : MonoBehaviour
     public GameObject level1GamePlayScreen;
     public GameObject level1GamePlayScreenÝnfoPanel;
     public bool isLevelCompleted;
+    public CreateLine cl;
     void Start()
     {
-        isLevelCompleted = true; // kablo baðlantýsý yaptýðým yerde kontrol edip oraya geçiricem
-        IsTutorialLevelCompleted(isLevelCompleted); // üsttekinin aynýsý
+        //isLevelCompleted = true; // kablo baðlantýsý yaptýðým yerde kontrol edip oraya geçiricem
+         // üsttekinin aynýsý
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        isLevelCompleted = cl.isRun;
+        IsTutorialLevelCompleted(isLevelCompleted);
     }
 
     public void HomeButton()
