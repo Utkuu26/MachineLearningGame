@@ -7,28 +7,64 @@ public class Spawner : MonoBehaviour
 {
     public InputObjects inputObjectPrefab;
     public Transform endTransform;
+    public Transform endTransform1;
+    public Transform endTransform2;
     public TextMeshProUGUI spawnedObjectsText;
+    public TextMeshProUGUI destroyedObjectsText1;
+    public bool isBlue;
+    public bool isRed;
+    public bool hasDelay;
+
 
     public List<InputObjects> SpawnedInputObjects = new List<InputObjects>();
     [SerializeField] private int _maxSpawnCount = 10;
 
     [SerializeField] private float _spawnPeriod = 2f;
 
-    private float nextSpawnTime = 0;
+    public float nextSpawnTime = 0;
     // Update is called once per frame
-    void Update()
+
+    private IEnumerator Start()
     {
-        HandleNullElements();
-        if (SpawnedInputObjects.Count >= _maxSpawnCount)
+        yield return new WaitForSeconds(1f);
+        if (isBlue)
         {
-            return;
+            hasDelay = true;
         }
 
-        if (Time.time >= nextSpawnTime)
+    }
+    void Update()
+    {
+        if (hasDelay && isBlue)
         {
-            nextSpawnTime = Time.time + _spawnPeriod;
-            Spawn();
+            HandleNullElements();
+            if (SpawnedInputObjects.Count >= _maxSpawnCount)
+            {
+                return;
+            }
+
+            if (Time.time >= nextSpawnTime)
+            {
+                nextSpawnTime = Time.time + _spawnPeriod;
+                Spawn();
+            }
         }
+
+        if(isRed)
+        {
+            HandleNullElements();
+            if (SpawnedInputObjects.Count >= _maxSpawnCount)
+            {
+                return;
+            }
+
+            if (Time.time >= nextSpawnTime)
+            {
+                nextSpawnTime = Time.time + _spawnPeriod;
+                Spawn();
+            }
+        }
+        
 
     }
 
@@ -36,7 +72,12 @@ public class Spawner : MonoBehaviour
     {
 
         var inputObject = Instantiate(inputObjectPrefab , this.transform);
-        inputObject.GetComponent<InputObjects>().nextPos = endTransform;
+        inputObject.transform.position = this.transform.GetChild(1).transform.position;
+        inputObject.GetComponent<InputObjects>().nextPoses[0] = endTransform;
+        inputObject.GetComponent<InputObjects>().nextPoses[1] = endTransform1;
+        inputObject.GetComponent<InputObjects>().nextPoses[2] = endTransform2;
+        inputObject.GetComponent<InputObjects>().destroyedObjectsText=destroyedObjectsText1;
+
        //inputObject.transform.position = this.transform.position;
         SpawnedInputObjects.Add(inputObject);
         spawnedObjectsText.text = (10 - SpawnedInputObjects.Count).ToString();
