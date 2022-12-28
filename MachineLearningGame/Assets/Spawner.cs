@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Spawner : MonoBehaviour
 {
     public InputObjects inputObjectPrefab;
     public Transform endTransform;
+    public TextMeshProUGUI spawnedObjectsText;
 
     public List<InputObjects> SpawnedInputObjects = new List<InputObjects>();
     [SerializeField] private int _maxSpawnCount = 10;
@@ -33,10 +35,11 @@ public class Spawner : MonoBehaviour
     private void Spawn()
     {
 
-        var inputObject = Instantiate(inputObjectPrefab);
+        var inputObject = Instantiate(inputObjectPrefab , this.transform);
         inputObject.GetComponent<InputObjects>().nextPos = endTransform;
        //inputObject.transform.position = this.transform.position;
         SpawnedInputObjects.Add(inputObject);
+        spawnedObjectsText.text = (10 - SpawnedInputObjects.Count).ToString();
 
 
     }
