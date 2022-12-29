@@ -16,6 +16,8 @@ public class IsLevelCompletedController : MonoBehaviour
     public TextMeshProUGUI destroyedObjects1Text;
     public GameObject runCompletePanel;
     public bool hasThree;
+    public bool hasOne;
+    public AudioSource _asWin;
     void Start()
     {
         playButton.interactable = false;
@@ -26,6 +28,7 @@ public class IsLevelCompletedController : MonoBehaviour
     {
         if (Lines[0].GetComponent<LineButtons>().line.enabled && Lines[1].GetComponent<LineButtons>().line.enabled && Lines[2].GetComponent<LineButtons>().line.enabled && dropDownMenu.value == 0)
         {
+            _asWin.Play();
             playButton.interactable = true;
            
         }
@@ -34,10 +37,19 @@ public class IsLevelCompletedController : MonoBehaviour
             playButton.interactable = false;
         }
 
-        if (destroyedObjects1Text.text == 10.ToString() && destroyedObjectsText.text == 10.ToString())
+        if (hasOne && destroyedObjectsText.text == 10.ToString())
         {
             runCompletePanel.SetActive(true);
         }
+        else
+        {
+            if (destroyedObjects1Text.text == 10.ToString() && destroyedObjectsText.text == 10.ToString())
+            {
+                runCompletePanel.SetActive(true);
+            }
+        }
+
+        
     }
 
     public void PlayButtonClick()

@@ -18,6 +18,8 @@ public class CreateLineForLevels : MonoBehaviour
     public Image Electricy;
     public bool isRun = false;
     public bool isLinesActive = false;
+    public AudioSource _asCreateLine;
+    public AudioSource _asDestroyLine;
     void Start()
     {
         line.positionCount = 2;
@@ -80,6 +82,7 @@ public class CreateLineForLevels : MonoBehaviour
 
                 if (item.GetComponent<LineButtons>().isRightClick)
                 {
+                    _asDestroyLine.Play();
                     item.GetComponent<LineButtons>().line.enabled = false;
                     item.GetComponent<LineButtons>().isRightClick = false;
                 }
@@ -117,6 +120,7 @@ public class CreateLineForLevels : MonoBehaviour
                 {
                     if (StartButtonName == item.GetComponent<LineButtons>().ButtonName)
                     {
+                        _asCreateLine.Play();
                         CreateLines(startTransform, endTransform, item.GetComponent<LineButtons>().line);
                         item.GetComponent<LineButtons>().line.enabled = true;
 

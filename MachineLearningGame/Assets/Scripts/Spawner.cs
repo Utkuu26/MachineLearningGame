@@ -16,6 +16,7 @@ public class Spawner : MonoBehaviour
     public bool isGreen;
     public bool hasDelay;
     public bool hasDelay2;
+    public AudioSource _asSpawn;
 
 
     public List<InputObjects> SpawnedInputObjects = new List<InputObjects>();
@@ -92,7 +93,7 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-
+        _asSpawn.Play();
         var inputObject = Instantiate(inputObjectPrefab , this.transform);
         inputObject.transform.position = this.transform.GetChild(1).transform.position;
         inputObject.GetComponent<InputObjects>().nextPoses[0] = endTransform;
