@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 30eb0c00
-      m_LastClickedID: 846640
-      m_ExpandedIDs: 9016fdff5c1efdff4aa1fdff9aa1fdffa0a1fdff0aa2fdff2e09ffff3609ffff3809ffff3c09ffff3e09fffff8ceffff06cfffff08cfffff0acfffff9aebffff5cefffff6cefffffd6f0ffff32f1ffff36f1ffff40f1ffff4af1ffff88f1ffff9af1ffffe4f1ffff22f2fffff8f4ffff18f5ffff2ef6ffff8af6ffff8ef6ffff98f6ffff26f7ffff6af8ffff36fbffffb45f0000666100002a620000c6620000c064000020650000346500006665000084650000606600003e6700001c6b00007a6c00005e470c007a470c0082470c00b6470c00de470c0030eb0c00d4ed0c00d6f00c0056f50c00a6f80c00
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0c7efcffd47efcff6e99fcffea9afcff64a9fcffbeabfcff58bafcffd4bbfcff5414fdffb615fdff9016fdff661bfdffc81bfdff5c1efdff4aa1fdff9aa1fdffa0a1fdff0aa2fdff2e09ffff3609ffff3809ffff3c09ffff3e09fffff8ceffff06cfffff08cfffff0acfffff9aebffff5cefffff6cefffffd6f0ffff32f1ffff36f1ffff40f1ffff4af1ffff88f1ffff9af1ffffe4f1ffff22f2fffff8f4ffff18f5ffff2ef6ffff8af6ffff8ef6ffff98f6ffff26f7ffff6af8ffff36fbffffb45f0000666100002a620000c6620000c064000020650000346500006665000084650000606600003e6700001c6b00007a6c00005e470c007a470c0082470c00b6470c00de470c003cec0c0080ed0c00d4ed0c006eee0c00c2ef0c0030f00c00b4f00c0032f30c002af40c0056f50c00bef60c00c4f80c00b6740e00ee770e00fc7f0e003c9f0e00709f0e00969f0e00f49f0e00
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -651,14 +651,14 @@ MonoBehaviour:
     y: 520
     width: 1236.8
     height: 210.79999
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -700,21 +700,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Audios
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Audios
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Git C\MachineLearningGame\MachineLearningGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: 3c380c00
-    m_LastClickedID: 800828
+    m_SelectedIDs: c25e0000
+    m_LastClickedID: 24258
     m_ExpandedIDs: 00000000c25e0000c45e0000c65e0000c85e0000ca5e0000cc5e0000ce5e0000d05e0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -768,8 +768,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 30eb0c00
-    m_LastClickedInstanceID: 846640
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000e6570000ca420000f642000002430000465500009a5600003e570000be440000a8440000aa630000386600001c430000b0eefbff4c4400006643000064430000684400005ad2000046d50000ba040100d65300006c430000f8490000545700006e4f000078430000ba45000070430000ac5400004a45000000000000
     m_RenameOverlay:
