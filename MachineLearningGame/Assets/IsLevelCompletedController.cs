@@ -8,12 +8,14 @@ public class IsLevelCompletedController : MonoBehaviour
 {
     public List<Button> Lines;
     public GameObject Spawner2;
+    public GameObject Spawner3;
    // public Dropdown dropDownMenu;
     public TMP_Dropdown dropDownMenu;
     public Button playButton;
     public TextMeshProUGUI destroyedObjectsText;
     public TextMeshProUGUI destroyedObjects1Text;
     public GameObject runCompletePanel;
+    public bool hasThree;
     void Start()
     {
         playButton.interactable = false;
@@ -42,5 +44,10 @@ public class IsLevelCompletedController : MonoBehaviour
     {
         Lines[0].GetComponent<Spawner>().enabled = true;
         Spawner2.GetComponent<Spawner>().enabled = true;
+       
+        if (hasThree)
+        {
+            Spawner3.GetComponent<Spawner>().enabled = true;
+        }
     }
 }

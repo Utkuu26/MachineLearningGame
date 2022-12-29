@@ -13,7 +13,9 @@ public class Spawner : MonoBehaviour
     public TextMeshProUGUI destroyedObjectsText1;
     public bool isBlue;
     public bool isRed;
+    public bool isGreen;
     public bool hasDelay;
+    public bool hasDelay2;
 
 
     public List<InputObjects> SpawnedInputObjects = new List<InputObjects>();
@@ -30,6 +32,11 @@ public class Spawner : MonoBehaviour
         if (isBlue)
         {
             hasDelay = true;
+        }
+        yield return new WaitForSeconds(1f);
+        if (isGreen)
+        {
+            hasDelay2 = true;
         }
 
     }
@@ -51,6 +58,21 @@ public class Spawner : MonoBehaviour
         }
 
         if(isRed)
+        {
+            HandleNullElements();
+            if (SpawnedInputObjects.Count >= _maxSpawnCount)
+            {
+                return;
+            }
+
+            if (Time.time >= nextSpawnTime)
+            {
+                nextSpawnTime = Time.time + _spawnPeriod;
+                Spawn();
+            }
+        }
+
+        if (hasDelay2 && isGreen)
         {
             HandleNullElements();
             if (SpawnedInputObjects.Count >= _maxSpawnCount)
