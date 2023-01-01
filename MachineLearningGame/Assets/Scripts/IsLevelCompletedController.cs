@@ -11,13 +11,19 @@ public class IsLevelCompletedController : MonoBehaviour
     public GameObject Spawner3;
    // public Dropdown dropDownMenu;
     public TMP_Dropdown dropDownMenu;
+    public TMP_Dropdown dropDownMenu1;
     public Button playButton;
     public TextMeshProUGUI destroyedObjectsText;
     public TextMeshProUGUI destroyedObjects1Text;
+    public TextMeshProUGUI destroyedObjects2Text;
+    public TextMeshProUGUI destroyedObjects3Text;
     public GameObject runCompletePanel;
     public bool hasThree;
     public bool hasOne;
+    public bool isLevel5;
     public AudioSource _asWin;
+
+    public List<Button> Buttons;
     void Start()
     {
         playButton.interactable = false;
@@ -26,16 +32,36 @@ public class IsLevelCompletedController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Lines[0].GetComponent<LineButtons>().line.enabled && Lines[1].GetComponent<LineButtons>().line.enabled && Lines[2].GetComponent<LineButtons>().line.enabled && dropDownMenu.value == 0)
+        if (isLevel5)
         {
-            _asWin.Play();
-            playButton.interactable = true;
-           
+            if (Lines[0].GetComponent<LineButtons>().line.enabled && Lines[1].GetComponent<LineButtons>().line.enabled && Lines[2].GetComponent<LineButtons>().line.enabled && dropDownMenu.value == 0 && dropDownMenu1.value == 1)
+            {
+                
+                playButton.interactable = true;
+               
+
+            }
+            else
+            {
+                playButton.interactable = false;
+            }
         }
+
         else
         {
-            playButton.interactable = false;
+            if (Lines[0].GetComponent<LineButtons>().line.enabled && Lines[1].GetComponent<LineButtons>().line.enabled && Lines[2].GetComponent<LineButtons>().line.enabled && dropDownMenu.value == 0)
+            {
+               
+                playButton.interactable = true;
+                
+
+            }
+            else
+            {
+                playButton.interactable = false;
+            }
         }
+      
 
         if (hasOne && destroyedObjectsText.text == 10.ToString())
         {
@@ -43,7 +69,11 @@ public class IsLevelCompletedController : MonoBehaviour
         }
         else
         {
-            if (destroyedObjects1Text.text == 10.ToString() && destroyedObjectsText.text == 10.ToString())
+            if (destroyedObjects1Text.text == 10.ToString() && destroyedObjectsText.text == 10.ToString() && !isLevel5)
+            {
+                runCompletePanel.SetActive(true);
+            }
+            if (isLevel5 && destroyedObjects1Text.text == 10.ToString() && destroyedObjectsText.text == 10.ToString() && destroyedObjects2Text.text == 5.ToString() && destroyedObjects3Text.text == 5.ToString())
             {
                 runCompletePanel.SetActive(true);
             }
@@ -54,12 +84,18 @@ public class IsLevelCompletedController : MonoBehaviour
 
     public void PlayButtonClick()
     {
+        _asWin.Play();
         Lines[0].GetComponent<Spawner>().enabled = true;
         Spawner2.GetComponent<Spawner>().enabled = true;
        
         if (hasThree)
         {
             Spawner3.GetComponent<Spawner>().enabled = true;
+        }
+
+        foreach (var item in Buttons)
+        {
+            item.interactable = false;
         }
     }
 }

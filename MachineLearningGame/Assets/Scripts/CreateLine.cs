@@ -27,7 +27,7 @@ public class CreateLine : MonoBehaviour
         {
             item.interactable = false;
         }
-        speed = 5;
+        speed = 40;
 
     }
 

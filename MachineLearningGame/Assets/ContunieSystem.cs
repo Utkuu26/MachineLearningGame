@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ContunieSystem : MonoBehaviour
 {
@@ -72,7 +73,7 @@ public class ContunieSystem : MonoBehaviour
                     PlayerPrefs.SetInt("isContunie", 0);
                     break;
                 case "level5":
-                    level3Mission.SetActive(true);
+                    level5Mission.SetActive(true);
                     PlayerPrefs.SetInt("isContunie", 0);
                     break;
 
@@ -80,6 +81,44 @@ public class ContunieSystem : MonoBehaviour
                     PlayerPrefs.SetString("Level", null);
                     break;
             }
+        }
+    }
+
+    public void RestartButton()
+    {
+        switch (PlayerPrefs.GetString("Level"))
+        {
+            case "level1":
+                SceneManager.LoadScene(1);
+                level1GamePlay.SetActive(true);
+                
+                break;
+
+            case "level2":
+                SceneManager.LoadScene(1);
+                level2GamePlay.SetActive(true);
+               
+                break;
+
+            case "level3":
+                SceneManager.LoadScene(1);
+                level3GamePlay.SetActive(true);
+               
+                break;
+            case "level4":
+                SceneManager.LoadScene(1);
+                level4GamePlay.SetActive(true);
+              
+                break;
+            case "level5":
+                SceneManager.LoadScene(1);
+                level5GamePlay.SetActive(true);
+               
+                break;
+
+            default:
+                PlayerPrefs.SetString("Level", null);
+                break;
         }
     }
 }

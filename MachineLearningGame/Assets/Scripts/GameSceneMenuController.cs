@@ -33,6 +33,7 @@ public class GameSceneMenuController : MonoBehaviour
     public GameObject level5GamePlayScreen;
     public GameObject level5GamePlayScreenÝnfoPanel;
     public GameObject level5MissionEndPanel;
+    public GameObject theEndPanel;
     public bool isLevelCompleted;
     public CreateLine cl;
     public AudioSource _as;
@@ -161,6 +162,7 @@ public class GameSceneMenuController : MonoBehaviour
     // level 1 win koþulu yazýp level1runcompl panelini açmalýsýn
     public void Level1CompletedButton()
     {
+        PlayerPrefs.SetInt("Coin", 250);
         _asReward.Play();
         level1GamePlayScreen.SetActive(false);
         level1MissionEndPanel.SetActive(true);
@@ -233,6 +235,7 @@ public class GameSceneMenuController : MonoBehaviour
 
     public void level2RunCompleteOkBtn()
     {
+        PlayerPrefs.SetInt("Coin", 600);
         _asReward.Play();
         level2GamePlayScreen.SetActive(false);
         level2MissionEndPanel.SetActive(true);
@@ -305,6 +308,7 @@ public class GameSceneMenuController : MonoBehaviour
 
     public void level3RunCompleteOkBtn()
     {
+        PlayerPrefs.SetInt("Coin", 1050);
         _asReward.Play();
         level3GamePlayScreen.SetActive(false);
         level3MissionEndPanel.SetActive(true);
@@ -334,6 +338,7 @@ public class GameSceneMenuController : MonoBehaviour
 
     public void level4RunCompleteOkBtn()
     {
+        PlayerPrefs.SetInt("Coin", 1500);
         _asReward.Play();
         level4GamePlayScreen.SetActive(false);
         level5Mission1Screen.SetActive(true);
@@ -399,6 +404,7 @@ public class GameSceneMenuController : MonoBehaviour
 
     public void level5RunCompleteOkBtn()
     {
+        PlayerPrefs.SetInt("Coin", 2100);
         _asReward.Play();
         level5GamePlayScreen.SetActive(false);
         level5MissionEndPanel.SetActive(true);
@@ -408,6 +414,13 @@ public class GameSceneMenuController : MonoBehaviour
     {
         _as.Play();
         level5MissionEndPanel.SetActive(false);
+        theEndPanel.SetActive(true);
+    }
+
+    public void TheEndScrrenToMainMenu()
+    {
+        _as.Play();
+        theEndPanel.SetActive(false);
         SceneManager.LoadScene(0);
     }
 
