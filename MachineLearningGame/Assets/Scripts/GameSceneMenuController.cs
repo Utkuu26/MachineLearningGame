@@ -27,7 +27,7 @@ public class GameSceneMenuController : MonoBehaviour
     public GameObject level4Mission1Screen;
     public GameObject level4GamePlayScreen;
     //public GameObject level4GamePlayScreenÝnfoPanel;
-    //public GameObject level4MissionEndPanel;
+    public GameObject level4MissionEndPanel;
     public GameObject level5Mission1Screen;
     public GameObject level5HintScreen;
     public GameObject level5GamePlayScreen;
@@ -341,6 +341,12 @@ public class GameSceneMenuController : MonoBehaviour
         PlayerPrefs.SetInt("Coin", 1500);
         _asReward.Play();
         level4GamePlayScreen.SetActive(false);
+        level4MissionEndPanel.SetActive(true);                                       // level5Mission1Screen.SetActive(true);
+    }
+    public void Level4MissionEndPanelOkButton()
+    {
+        _as.Play();
+        level4MissionEndPanel.SetActive(false);
         level5Mission1Screen.SetActive(true);
     }
 
@@ -348,7 +354,7 @@ public class GameSceneMenuController : MonoBehaviour
     {
         _as.Play();
         level5Mission1Screen.SetActive(false);
-        level4GamePlayScreen.SetActive(true); // buraya neler öðrendim ekleyip oraya döndürmek daha mantýklý
+        level4MissionEndPanel.SetActive(true); // buraya neler öðrendim ekleyip oraya döndürmek daha mantýklý
 
     }
 

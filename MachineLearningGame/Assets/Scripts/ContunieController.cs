@@ -12,13 +12,13 @@ public class ContunieController : MonoBehaviour
     {
         if (PlayerPrefs.GetString("Level") == "")
         {
-            contBtn.interactable = false;
-            contBtnUp.interactable = false;
+            contBtn.enabled = false;
+            contBtnUp.enabled = false;
         }
         else
         {
-            contBtn.interactable = true;
-            contBtnUp.interactable = true;
+            contBtn.enabled = true;
+            contBtnUp.enabled = true;
         }
     }
 

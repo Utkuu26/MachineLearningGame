@@ -19,6 +19,7 @@ public class ContunieSystem : MonoBehaviour
     public GameObject level5Mission;
     public GameObject level5Hint;
     public GameObject level5GamePlay;
+    public bool restart;
 
 
     void Start()
@@ -77,8 +78,52 @@ public class ContunieSystem : MonoBehaviour
                     PlayerPrefs.SetInt("isContunie", 0);
                     break;
 
+              
+            }
+        }
+
+        if (restart)
+        {
+
+            switch (PlayerPrefs.GetString("Level"))
+            {
+                case "level1":
+                    SceneManager.LoadScene(1);
+                    Debug.Log("REstart");
+                    level1GamePlay.SetActive(true);
+                    restart = false;
+
+                    break;
+
+                case "level2":
+                    SceneManager.LoadScene(1);
+                    level2GamePlay.SetActive(true);
+                    restart = false;
+
+                    break;
+
+                case "level3":
+                    SceneManager.LoadScene(1);
+                    level3GamePlay.SetActive(true);
+                    restart = false;
+
+                    break;
+                case "level4":
+                    SceneManager.LoadScene(1);
+                    level4GamePlay.SetActive(true);
+                    restart = false;
+
+                    break;
+                case "level5":
+                    SceneManager.LoadScene(1);
+                    level5GamePlay.SetActive(true);
+                    restart = false;
+
+                    break;
+
                 default:
                     PlayerPrefs.SetString("Level", null);
+                    restart = false;
                     break;
             }
         }
@@ -86,39 +131,6 @@ public class ContunieSystem : MonoBehaviour
 
     public void RestartButton()
     {
-        switch (PlayerPrefs.GetString("Level"))
-        {
-            case "level1":
-                SceneManager.LoadScene(1);
-                level1GamePlay.SetActive(true);
-                
-                break;
-
-            case "level2":
-                SceneManager.LoadScene(1);
-                level2GamePlay.SetActive(true);
-               
-                break;
-
-            case "level3":
-                SceneManager.LoadScene(1);
-                level3GamePlay.SetActive(true);
-               
-                break;
-            case "level4":
-                SceneManager.LoadScene(1);
-                level4GamePlay.SetActive(true);
-              
-                break;
-            case "level5":
-                SceneManager.LoadScene(1);
-                level5GamePlay.SetActive(true);
-               
-                break;
-
-            default:
-                PlayerPrefs.SetString("Level", null);
-                break;
-        }
+        restart = true;
     }
 }
