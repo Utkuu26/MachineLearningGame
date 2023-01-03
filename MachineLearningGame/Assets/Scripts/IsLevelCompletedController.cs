@@ -85,8 +85,9 @@ public class IsLevelCompletedController : MonoBehaviour
     public void PlayButtonClick()
     {
         _asWin.Play();
-        Lines[0].GetComponent<Spawner>().enabled = true;
-        Spawner2.GetComponent<Spawner>().enabled = true;
+        PlayerPrefs.SetInt("isStart", 1);
+        //Lines[0].GetComponent<Spawner>().enabled = true;
+       // Spawner2.GetComponent<Spawner>().enabled = true;
        
         if (hasThree)
         {

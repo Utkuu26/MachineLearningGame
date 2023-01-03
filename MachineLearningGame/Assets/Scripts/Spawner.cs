@@ -22,6 +22,9 @@ public class Spawner : MonoBehaviour
     public bool isLevel5;
     public AudioSource _asSpawn;
     public int spawn = 1;
+    public List<GameObject> InpuGameObjects;
+    public List<GameObject> OutputGameObjects;
+
 
 
     public List<InputObjects> SpawnedInputObjects = new List<InputObjects>();
@@ -123,6 +126,7 @@ public class Spawner : MonoBehaviour
             inputObject.GetComponent<InputObjects>().nextPoses[1] = endTransform1;
             inputObject.GetComponent<InputObjects>().nextPoses[2] = endTransform2;
             inputObject.GetComponent<InputObjects>().destroyedObjectsText = destroyedObjectsText1;
+            inputObject.GetComponent<InputObjects>().OutputGameObjects = OutputGameObjects;
         }
        
       
@@ -131,7 +135,8 @@ public class Spawner : MonoBehaviour
         //inputObject.transform.position = this.transform.position;
         spawn++;
         SpawnedInputObjects.Add(inputObject);
-        spawnedObjectsText.text = (10 - SpawnedInputObjects.Count).ToString();
+        InpuGameObjects[SpawnedInputObjects.Count-1].SetActive(false);
+       // spawnedObjectsText.text = (10 - SpawnedInputObjects.Count).ToString();
 
 
     }
