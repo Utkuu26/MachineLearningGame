@@ -16,11 +16,22 @@ public class LineButtons : MonoBehaviour, IPointerClickHandler
 
     //}
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
+    // Update is called once per frame
+    void Update()
+    {
+        if (PlayerPrefs.GetInt("isRestart") == 1)
+        {
+            Debug.LogWarning("restartdoru");
+            if (line!=null)
+            {
+                PlayerPrefs.SetInt("isButtonClosed", 1);
+                Debug.LogWarning("saðclickdoru");
+                isRightClick = true;
+                
+            }
+            isClicked = false;
+        }
+    }
 
     //public void OnClick()
     //{

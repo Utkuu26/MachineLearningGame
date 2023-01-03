@@ -82,55 +82,8 @@ public class ContunieSystem : MonoBehaviour
             }
         }
 
-        if (restart)
-        {
-
-            switch (PlayerPrefs.GetString("Level"))
-            {
-                case "level1":
-                    SceneManager.LoadScene(1);
-                    Debug.Log("REstart");
-                    level1GamePlay.SetActive(true);
-                    restart = false;
-
-                    break;
-
-                case "level2":
-                    SceneManager.LoadScene(1);
-                    level2GamePlay.SetActive(true);
-                    restart = false;
-
-                    break;
-
-                case "level3":
-                    SceneManager.LoadScene(1);
-                    level3GamePlay.SetActive(true);
-                    restart = false;
-
-                    break;
-                case "level4":
-                    SceneManager.LoadScene(1);
-                    level4GamePlay.SetActive(true);
-                    restart = false;
-
-                    break;
-                case "level5":
-                    SceneManager.LoadScene(1);
-                    level5GamePlay.SetActive(true);
-                    restart = false;
-
-                    break;
-
-                default:
-                    PlayerPrefs.SetString("Level", null);
-                    restart = false;
-                    break;
-            }
-        }
+       
     }
 
-    public void RestartButton()
-    {
-        restart = true;
-    }
+   
 }

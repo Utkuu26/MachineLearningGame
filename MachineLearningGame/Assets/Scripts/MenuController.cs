@@ -32,6 +32,7 @@ public class MenuController : MonoBehaviour
         _as.Play();
         mainMenuPanel.SetActive(false);
         nickNamePanel.SetActive(true);
+        PlayerPrefs.SetString("Level", "");
         
     }
     public void Play()

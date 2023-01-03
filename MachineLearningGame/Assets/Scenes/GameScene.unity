@@ -3429,18 +3429,18 @@ PrefabInstance:
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2083638240}
+      objectReference: {fileID: 1450168490}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartButton
+      value: RestartButtonclick
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ContunieSystem, Assembly-CSharp
+      value: RestartButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3541,6 +3541,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4642832226442832004, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
   m_PrefabInstance: {fileID: 95787451}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &95787453 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
+  m_PrefabInstance: {fileID: 95787451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &97375420
 GameObject:
   m_ObjectHideFlags: 0
@@ -9957,6 +9968,7 @@ MonoBehaviour:
   - {fileID: 1802121385}
   - {fileID: 1359213253}
   - {fileID: 2096652312}
+  - {fileID: 1572090666}
 --- !u!1 &289673940
 GameObject:
   m_ObjectHideFlags: 0
@@ -20663,6 +20675,7 @@ MonoBehaviour:
   - {fileID: 919934702}
   - {fileID: 1996908450}
   - {fileID: 1812793066}
+  - {fileID: 95787453}
 --- !u!1 &656911929 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 244642859913101927, guid: c3a1101af71e8134c8aed6a79c0bfbc9, type: 3}
@@ -24712,18 +24725,18 @@ PrefabInstance:
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2083638240}
+      objectReference: {fileID: 1450168490}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartButton
+      value: RestartButtonclick
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ContunieSystem, Assembly-CSharp
+      value: RestartButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -24824,6 +24837,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4642832226442832004, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
   m_PrefabInstance: {fileID: 800802879}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &800802881 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
+  m_PrefabInstance: {fileID: 800802879}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &801343485 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4568277580217696288, guid: 984601a100847d14e86653ebf403a925, type: 3}
@@ -29718,6 +29742,7 @@ MonoBehaviour:
   - {fileID: 1842553694}
   - {fileID: 2147261370}
   - {fileID: 1420316513}
+  - {fileID: 800802881}
 --- !u!1 &940287656
 GameObject:
   m_ObjectHideFlags: 0
@@ -30447,6 +30472,7 @@ MonoBehaviour:
   - {fileID: 1273067951}
   - {fileID: 778575826}
   - {fileID: 1903349835}
+  - {fileID: 1877416375}
 --- !u!1 &958553001
 GameObject:
   m_ObjectHideFlags: 0
@@ -44019,6 +44045,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 73919167850773622, guid: a30f088378e299847bc9d93e1deb98e0, type: 3}
   m_PrefabInstance: {fileID: 1449809688}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1450168489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450168491}
+  - component: {fileID: 1450168490}
+  m_Layer: 0
+  m_Name: RestartSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1450168490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450168489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ae054ad96afb64db3ccfb1252da386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restart: 0
+  level1GamePlayButtons: []
+  leve21GamePlayButtons: []
+  leve31GamePlayButtons: []
+  leve41GamePlayButtons: []
+  leve51GamePlayButtons: []
+--- !u!4 &1450168491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450168489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.762224, y: 30.299175, z: 196.2647}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450600117
 GameObject:
   m_ObjectHideFlags: 0
@@ -47821,9 +47897,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2083638240}
-        m_TargetAssemblyTypeName: ContunieSystem, Assembly-CSharp
-        m_MethodName: RestartButton
+      - m_Target: {fileID: 1450168490}
+        m_TargetAssemblyTypeName: RestartButton, Assembly-CSharp
+        m_MethodName: RestartButtonclick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -56338,18 +56414,18 @@ PrefabInstance:
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2083638240}
+      objectReference: {fileID: 1450168490}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartButton
+      value: RestartButtonclick
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ContunieSystem, Assembly-CSharp
+      value: RestartButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -56450,6 +56526,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4642832226442832004, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
   m_PrefabInstance: {fileID: 1877416373}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1877416375 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
+  m_PrefabInstance: {fileID: 1877416373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1879164871
 GameObject:
   m_ObjectHideFlags: 0
@@ -57312,6 +57399,7 @@ MonoBehaviour:
   - {fileID: 523866163}
   - {fileID: 1405950659}
   - {fileID: 1639844783}
+  - {fileID: 8379434004255048834}
 --- !u!1 &1931756911
 GameObject:
   m_ObjectHideFlags: 0
@@ -67587,18 +67675,18 @@ PrefabInstance:
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2083638240}
+      objectReference: {fileID: 1450168490}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartButton
+      value: RestartButtonclick
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ContunieSystem, Assembly-CSharp
+      value: RestartButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -67699,6 +67787,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4642832226442832004, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
   m_PrefabInstance: {fileID: 8379434004255048832}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8379434004255048834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3572071901152962127, guid: c5ac314d3557ef641b7291c46e8e4c59, type: 3}
+  m_PrefabInstance: {fileID: 8379434004255048832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8568692139928817201
 GameObject:
   m_ObjectHideFlags: 0
