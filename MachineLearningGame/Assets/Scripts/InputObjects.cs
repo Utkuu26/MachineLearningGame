@@ -11,8 +11,10 @@ public class InputObjects : MonoBehaviour
     public List<Transform> nextPoses;
     public TextMeshProUGUI destroyedObjectsText;
     public List<GameObject> OutputGameObjects;
+    public List<GameObject> OutputGameObjects1;
     public int i = 0;
     public bool isContinue;
+    public bool isTrash;
     //dizi tut
     void Start()
     {
@@ -49,8 +51,13 @@ public class InputObjects : MonoBehaviour
                 //Destroy(gameObject);
                 this.gameObject.SetActive(false);
                 //OutputGameObjects[]
-                destroyedObjectsText.text = (int.Parse(destroyedObjectsText.text)+1).ToString();
-                OutputGameObjects[int.Parse(destroyedObjectsText.text)-1].SetActive(true);
+                destroyedObjectsText.text = (int.Parse(destroyedObjectsText.text) + 1).ToString();
+                if (!isTrash)
+                {
+                   
+                    OutputGameObjects[int.Parse(destroyedObjectsText.text) - 1].SetActive(true);
+                }
+                
             }
             // indeks toplama eþitse sil objeyi
             

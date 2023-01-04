@@ -24,6 +24,7 @@ public class Spawner : MonoBehaviour
     public int spawn = 1;
     public List<GameObject> InpuGameObjects;
     public List<GameObject> OutputGameObjects;
+    public List<GameObject> OutputGameObjectslvl5;
 
 
 
@@ -113,12 +114,14 @@ public class Spawner : MonoBehaviour
                 inputObject.GetComponent<InputObjects>().nextPoses[1] = endTransform1;
                 inputObject.GetComponent<InputObjects>().nextPoses[2] = endTransform2;
                 inputObject.GetComponent<InputObjects>().destroyedObjectsText = destroyedObjectsText1;
+                inputObject.GetComponent<InputObjects>().OutputGameObjects = OutputGameObjects;
             }
             else
             {
                 inputObject.GetComponent<InputObjects>().nextPoses[1] = level5EndTransform1;
                 inputObject.GetComponent<InputObjects>().nextPoses[2] = level5EndTransform2;
                 inputObject.GetComponent<InputObjects>().destroyedObjectsText = destroyedObjectsText2;
+                inputObject.GetComponent<InputObjects>().OutputGameObjects = OutputGameObjectslvl5;
             }
         }
         else

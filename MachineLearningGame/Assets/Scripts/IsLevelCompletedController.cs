@@ -21,6 +21,7 @@ public class IsLevelCompletedController : MonoBehaviour
     public bool hasThree;
     public bool hasOne;
     public bool isLevel5;
+    public bool hasTrash;
     public AudioSource _asWin;
 
     public List<Button> Buttons;
@@ -69,11 +70,15 @@ public class IsLevelCompletedController : MonoBehaviour
         }
         else
         {
-            if (destroyedObjects1Text.text == 10.ToString() && destroyedObjectsText.text == 10.ToString() && !isLevel5)
+            if (destroyedObjects1Text.text == 10.ToString() && destroyedObjectsText.text == 10.ToString() && !isLevel5 && !hasTrash)
             {
                 runCompletePanel.SetActive(true);
             }
             if (isLevel5 && destroyedObjects1Text.text == 10.ToString() && destroyedObjectsText.text == 10.ToString() && destroyedObjects2Text.text == 5.ToString() && destroyedObjects3Text.text == 5.ToString())
+            {
+                runCompletePanel.SetActive(true);
+            }
+            if (hasTrash && destroyedObjects1Text.text == 10.ToString() && destroyedObjectsText.text == 10.ToString() && destroyedObjects2Text.text == 10.ToString())
             {
                 runCompletePanel.SetActive(true);
             }
