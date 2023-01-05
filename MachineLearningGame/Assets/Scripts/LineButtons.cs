@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class LineButtons : MonoBehaviour, IPointerClickHandler
 {
     public bool isClicked = false;
     public bool isRightClick = false;
+    public bool hasDropdown;
+    public bool isLevel5;
     public string ButtonName;
+    public TMP_Dropdown dropdown;
+    public TMP_Dropdown dropdown1;
     public LineRenderer line;
     public List<Image> ImageList;
     //void Start()
@@ -21,6 +26,15 @@ public class LineButtons : MonoBehaviour, IPointerClickHandler
     {
         if (PlayerPrefs.GetInt("isRestart") == 1)
         {
+            if (hasDropdown)
+            {
+                dropdown.SetValueWithoutNotify(0);
+                if (isLevel5)
+                {
+                    dropdown1.SetValueWithoutNotify(0);
+                }
+
+            }
             Debug.LogWarning("restartdoru");
             if (line!=null)
             {

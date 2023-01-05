@@ -23,6 +23,7 @@ public class IsLevelCompletedController : MonoBehaviour
     public bool isLevel5;
     public bool hasTrash;
     public AudioSource _asWin;
+    public int dropdownMenuValue;
 
     public List<Button> Buttons;
     void Start()
@@ -35,11 +36,11 @@ public class IsLevelCompletedController : MonoBehaviour
     {
         if (isLevel5)
         {
-            if (Lines[0].GetComponent<LineButtons>().line.enabled && Lines[1].GetComponent<LineButtons>().line.enabled && Lines[2].GetComponent<LineButtons>().line.enabled && dropDownMenu.value == 0 && dropDownMenu1.value == 1)
+            if (Lines[0].GetComponent<LineButtons>().line.enabled && Lines[1].GetComponent<LineButtons>().line.enabled && Lines[2].GetComponent<LineButtons>().line.enabled && dropDownMenu.value == dropdownMenuValue && dropDownMenu1.value == 3)
             {
                 
                 playButton.interactable = true;
-               
+                
 
             }
             else
@@ -50,7 +51,7 @@ public class IsLevelCompletedController : MonoBehaviour
 
         else
         {
-            if (Lines[0].GetComponent<LineButtons>().line.enabled && Lines[1].GetComponent<LineButtons>().line.enabled && Lines[2].GetComponent<LineButtons>().line.enabled && dropDownMenu.value == 0)
+            if (Lines[0].GetComponent<LineButtons>().line.enabled && Lines[1].GetComponent<LineButtons>().line.enabled && Lines[2].GetComponent<LineButtons>().line.enabled && dropDownMenu.value == dropdownMenuValue)
             {
                
                 playButton.interactable = true;
@@ -92,8 +93,8 @@ public class IsLevelCompletedController : MonoBehaviour
         _asWin.Play();
         PlayerPrefs.SetInt("isStart", 1);
         //Lines[0].GetComponent<Spawner>().enabled = true;
-       // Spawner2.GetComponent<Spawner>().enabled = true;
-       
+        // Spawner2.GetComponent<Spawner>().enabled = true;
+        
         if (hasThree)
         {
             Spawner3.GetComponent<Spawner>().enabled = true;
