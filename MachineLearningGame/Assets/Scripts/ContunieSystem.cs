@@ -19,6 +19,7 @@ public class ContunieSystem : MonoBehaviour
     public GameObject level5Mission;
     public GameObject level5Hint;
     public GameObject level5GamePlay;
+    public GameObject level0Hint;
     public bool restart;
 
 
@@ -56,24 +57,29 @@ public class ContunieSystem : MonoBehaviour
             switch (PlayerPrefs.GetString("Level"))
             {
                 case "level1":
+                    level0Hint.SetActive(false);
                     level1Mission.SetActive(true);
                     PlayerPrefs.SetInt("isContunie", 0);
                     break;
 
                 case "level2":
+                    level0Hint.SetActive(false);
                     level2Mission.SetActive(true);
                     PlayerPrefs.SetInt("isContunie", 0);
                     break;
 
                 case "level3":
+                    level0Hint.SetActive(false);
                     level3Mission.SetActive(true);
                     PlayerPrefs.SetInt("isContunie", 0);
                     break;
                 case "level4":
+                    level0Hint.SetActive(false);
                     level4Mission.SetActive(true);
                     PlayerPrefs.SetInt("isContunie", 0);
                     break;
                 case "level5":
+                    level0Hint.SetActive(false);
                     level5Mission.SetActive(true);
                     PlayerPrefs.SetInt("isContunie", 0);
                     break;
